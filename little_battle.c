@@ -2223,7 +2223,7 @@ void BattleParallel_1()
 void gacha()
 {
 	int g;
-	char Image[7];
+	char Image[20];
 	if(MinorMenu==11)
 	{
 		for(int i=1;i<=11;i++)
@@ -2246,7 +2246,7 @@ void gacha()
 		
 		if(HeroLV[OpenHeroImage[i+1]]==1||OpenHeroImage[i+1]>18||MinorMenu==1)
 		{
-			sprintf(Image,"%d.png",OpenHeroImage[i+1]);
+			sprintf(Image, ".\\Image\\%d.png",OpenHeroImage[i+1]);
 			system(Image);
 		}
 		DrawForm();
@@ -2256,8 +2256,8 @@ void gacha()
 
 void run()
 {
-	char input,YN,inputh,Image[7];
-	int ll;
+	char input,YN,inputh,Image[20];
+	int ll=0;
 	ClickTabNum[3]=20,ClickTabNum[4]=20;
 	while(1)
 	{
@@ -2417,7 +2417,8 @@ void run()
 					break;
 				case 'U':
 				case 'u':
-					sprintf(Image,"%d.png",ClickTabNum[3]%20+1);
+					sprintf(Image, ".\\Image\\%d.png",ClickTabNum[3]%20+1);
+					sprintf(Image,"%d.png");
 					system(Image);
 					break;
 				case 75 :
@@ -2441,7 +2442,7 @@ void run()
 					break;
 				case 'U':
 				case 'u':
-					sprintf(Image,"%d.png",ClickTabNum[4]%20+1);
+					sprintf(Image, ".\\Image\\%d.png",ClickTabNum[4]%20+1);
 					system(Image);
 					break;
 				case 75 :
@@ -2578,7 +2579,7 @@ void run()
 				case 'H':
 				case 'I':
 				case 'J':
-					sprintf(Image,"%d.png",Team[input-64]);
+					sprintf(Image, ".\\Image\\%d.png",Team[input-64]);
 					system(Image);
 					break;
 			}

@@ -41,6 +41,7 @@ int main()
 	CurrentEnemyHP[0][0]=1;
 	CurrentHeroHP[0][0]=1;
 	DrawForm();
+	DrawForm();
 	run();
 	return 0;
 }
